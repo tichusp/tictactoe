@@ -1,0 +1,41 @@
+#grid {
+	background-color: linen;
+	margin: 0 auto 10px auto;
+	width: 45vw;
+	min-width: 300px;
+	text-align: center;
+	border-right:2px solid black;
+	border-bottom:2px solid black;
+	font-size:9vw;
+}
+.row {
+	margin: 0;
+}
+.col-xs-4 {
+	border-left:2px solid black;
+	border-top: 2px solid black;
+	border-right: none;
+	height:15vw;
+	min-height: 100px;
+	line-height: 160%;
+	cursor: pointer;
+}
+
+#btns {
+	width: 45vw;
+	min-width: 304px;
+	margin:auto;
+}
+
+.list-group {
+	width:45vw;
+	min-width:304px;
+	margin: auto;
+}
+
+.list-group-item {
+	display:inline-block;
+	width:14vw;
+	min-width:95px;
+	border: none;
+}
