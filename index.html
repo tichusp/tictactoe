@@ -1,105 +1,117 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title>TicTacToe</title>
-    
-    
-    
+
+
+
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    
-    
-    
+
+
+
   </head>
 
   <body>
 
-    <div class='container-fluid'>
-		<ul class="list-group">
-			<li id='li1' class="list-group-item">Wins: 0</li>
-			<li id='li2' class="list-group-item">Losses: 0</li> 
-			<li id='li3' class="list-group-item">Draws: 0</li> 
-		</ul>
-		<div id='grid'>
-			<div class='row'>
-				<div id='g00' class='col-xs-4'>
-				</div>
-				<div id='g01' class='col-xs-4'>
-				</div>
-				<div id='g02' class='col-xs-4'>
-				</div>
-			</div>
-			<div class='row'>
-				<div id='g10' class='col-xs-4'>
-				</div>
-				<div id='g11'class='col-xs-4'>
-				</div>
-				<div id='g12'class='col-xs-4'>
-				</div>
-			</div>
-			<div class='row'>
-				<div id='g20'class='col-xs-4'>
-				</div>
-				<div id='g21'class='col-xs-4'>
-				</div>
-				<div id='g22'class='col-xs-4'>
-				</div>
-			</div>
-		</div>
-		<div id='btns'>
-			<div class='btn-group btn-group-justified'>
-				<div class="btn-group">
-					<button id='new' class="btn btn-primary">New Game</button>
-				</div>
-				<div class="btn-group">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Settings</button>
-				</div>			
-			</div>
-		</div>
-	</div>
+    <div class="container-fluid">
+      <ul class="list-group text-center">
+        <li class="list-group-item">Wins: 0</li>
+        <li class="list-group-item">Losses: 0</li>
+        <li class="list-group-item">Draws: 0</li>
+      </ul>
+      <div id="grid">
+        <div class="row">
+          <div class="col-xs-4 grid-box">
+          </div>
+          <div class="col-xs-4 grid-box">
+          </div>
+          <div class="col-xs-4 grid-box">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 grid-box">
+          </div>
+          <div class="col-xs-4 grid-box">
+          </div>
+          <div class="col-xs-4 grid-box">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 grid-box">
+          </div>
+          <div class="col-xs-4 grid-box">
+          </div>
+          <div class="col-xs-4 grid-box">
+          </div>
+        </div>
+      </div>
+      <div id="btns">
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group">
+            <button id="new" class="btn btn-primary">New Game</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Settings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Settings</h3>
+          </div>
+          <div class="modal-body">
+            <span>Difficulty</span>
+            <form id="form1" role="form">
+              <label class="label-inline">
+                <input type="radio" name="difficulty" value="0">TI-82(Easy)
+              </label>
+              <label class="label-inline">
+                <input type="radio" name="difficulty" value="1" checked>PDP-1(Difficult)
+              </label>
+              <label class="label-inline">
+                <input type="radio" name="difficulty" value="2" checked>Supercomputer(Unbeatable)
+              </label>
+            </form>
+            <span>Mark</span>
+            <form id="form2" role="form">
+              <label class="label-inline">
+                <input type="radio" name="mark" value="X">X
+              </label>
+              <label class="label-inline">
+                <input type="radio" name="mark" value='O' checked>O
+              </label>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="endgameModal" class="modal fade text-center" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="js/index.js"></script>
 
 
 
 
-
-  <!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
-		    <div class="modal-content">
-				<div class="modal-header">
-				  <h4 class="modal-title">Settings</h4>
-				</div>
-				<div class="modal-body">
-					<span>Mark</span>
-					<form id='form2' role="form">
-						<label class='label-inline'>
-							<input type="radio" name="opradio" value='X'>X 
-						</label>
-						<label class='label-inline'>
-							<input type="radio" name="opradio" value='O' checked>O
-						</label>
-					</form>					
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
-				</div>
-		    </div>
-		  
-		</div>
-	</div>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-    
-    
-    
   </body>
 </html>
