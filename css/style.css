@@ -1,41 +1,66 @@
 #grid {
+	margin: 0 auto 0.2em auto;
+	width: 5em;
 	background-color: linen;
-	margin: 0 auto 10px auto;
-	width: 45vw;
-	min-width: 300px;
 	text-align: center;
-	border-right:2px solid black;
-	border-bottom:2px solid black;
-	font-size:9vw;
+	border-right: 0.025em solid black;
+	border-bottom: 0.025em solid black;
 }
+
+#btns {
+	width: 20em;
+	font-size: 25%;
+	margin: auto;
+}
+
+.container-fluid {
+	font-size: 90px;
+}
+
 .row {
 	margin: 0;
 }
-.col-xs-4 {
-	border-left:2px solid black;
-	border-top: 2px solid black;
+
+.grid-box {
+	height: 1.67em;
+	border-left: 0.025em solid black;
+	border-top: 0.025em solid black;
 	border-right: none;
-	height:15vw;
-	min-height: 100px;
 	line-height: 160%;
 	cursor: pointer;
 }
 
-#btns {
-	width: 45vw;
-	min-width: 304px;
-	margin:auto;
+.btn {
+	font-size: 125%;
 }
 
 .list-group {
-	width:45vw;
-	min-width:304px;
+	width: 5em;
 	margin: auto;
 }
 
 .list-group-item {
-	display:inline-block;
-	width:14vw;
-	min-width:95px;
+	display: inline-block;
+	font-size: 25%;
+	width: 5.8em;
 	border: none;
 }
+
+@media only screen 
+	and (max-device-width: 1024px)
+	and (orientation: portrait){ 
+		.container-fluid {
+			font-size: 180px;
+		}
+		
+		.modal-dialog {
+			font-size: 48px;
+			width: 730px;
+		}
+		
+		input[type=radio] { 
+			width: 40px;
+			height: 40px;
+		}
+}
+
